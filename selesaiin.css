@@ -1,0 +1,392 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Inter, system-ui, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 28px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: -0.3px;
+}
+
+/* RIGHT SIDE NAV */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* BELL */
+.btn-bell {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #64748b;
+  transition: background 0.15s;
+}
+
+.btn-bell:hover {
+  background: #f1f5f9;
+}
+
+.bell-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+}
+
+/* BANTUAN */
+.btn-bantuan {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.btn-bantuan:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* USER AVATAR */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1e293b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  border: 2px solid #e2e8f0;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.user-dept {
+  font-size: 0.73rem;
+  color: #94a3b8;
+}
+
+/* FILTER SECTION */
+.filter-section {
+  padding: 20px 28px;
+}
+
+.filter-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 0 0 1px #e2e8f0;
+}
+
+/* TOP ROW */
+.filter-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* SEARCH INPUT */
+.search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 14px 9px 38px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  color: #334155;
+  outline: none;
+  background: #f8fafc;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: #fff;
+}
+
+/* DATE PICKER */
+.date-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #334155;
+  transition: border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.date-wrap:hover {
+  border-color: #2563eb;
+}
+
+.date-wrap svg {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+/* STATUS TABS */
+.status-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #f1f5f9;
+  border-radius: 9px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  background: transparent;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.3);
+}
+
+.tab-btn:not(.active):hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* CARI BUTTON */
+.btn-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 22px;
+  background: #1e293b;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-search:hover {
+  background: #0f172a;
+}
+
+/* BOTTOM ROW – ACTIVE FILTERS */
+.filter-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.filter-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+/* CHIPS */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-size: 0.78rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chip-dot.red   { background: #ef4444; }
+.chip-dot.green { background: #22c55e; }
+.chip-dot.blue  { background: #3b82f6; }
+
+.chip-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e1;
+  color: #475569;
+  font-size: 0.65rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.12s;
+  margin-left: 2px;
+}
+
+.chip-x:hover {
+  background: #94a3b8;
+  color: #fff;
+}
+
+/* RESET FILTER */
+.btn-reset {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.12s;
+}
+
+.btn-reset:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+
+.kanban-board {
+  display: flex;
+  gap: 18px;
+  padding: 20px 28px;
+  overflow-x: auto;
+  justify-content: space-evenly;
+  background: #ffffff;
+}

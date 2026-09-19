@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SelesaiIn</title>
+  <link rel="stylesheet" href="selesaiin.css" />
+</head>
+<body>
+
+
+
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a class="logo" href="#">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                   10-4.48 10-10S17.52 2 12 2zm-1 14.59L6.41
+                   12l1.42-1.41L11 13.17l5.17-5.17 1.42
+                   1.42L11 16.59z"/>
+        </svg>
+      </div>
+      <span class="logo-text">SelesaiIn</span>
+    </a>
+
+    <div class="nav-right">
+      <!-- User -->
+      <div class="user-info">
+        <div class="avatar">BS</div>
+        <div class="user-meta">
+          <span class="user-name">Budi Setiabudi</span>
+          <span class="user-dept">Teknik Informatika</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+  <!-- ── FILTER SECTION ── -->
+  <section class="filter-section">
+    <div class="filter-card">
+
+      <!-- Top row -->
+      <div class="filter-top">
+        <!-- Search -->
+        <div class="search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input class="search-input" type="text"
+                 placeholder="Cari tugas, modul, atau tag..." />
+        </div>
+
+        <!-- Date range -->
+        <div class="date-wrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          15 Sep 2026 – 30 Sep 2026
+        </div>
+
+        <!-- Status tabs -->
+        <div class="status-tabs">
+          <button class="tab-btn active">To do</button>
+          <button class="tab-btn">In Progress</button>
+          <button class="tab-btn">Done</button>
+        </div>
+
+        <!-- Cari button -->
+        <button class="btn-search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+          Cari
+        </button>
+      </div>
+
+      <!-- Bottom row – active filters -->
+      <div class="filter-bottom">
+        <div class="filter-left">
+          <span class="filter-label">Filter Aktif:</span>
+
+          <span class="chip">
+            <span class="chip-dot red"></span>
+            Priority: High
+            <button class="chip-x" aria-label="Hapus filter">✕</button>
+          </span>
+
+          <span class="chip">
+            <span class="chip-dot green"></span>
+            Matkul: Pemrograman Web
+            <button class="chip-x" aria-label="Hapus filter">✕</button>
+          </span>
+
+          <span class="chip">
+            <span class="chip-dot blue"></span>
+            Semester 5
+            <button class="chip-x" aria-label="Hapus filter">✕</button>
+          </span>
+        </div>
+
+        <button class="btn-reset">Reset Filter</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── KANBAN ── -->
+<!-- The Main Board Container -->
+<main class="kanban-board">
+
+  <!-- TO DO COLUMN -->
+  <section class="kanban-column" id="todo">
+    <h2>To Do</h2>
+    <div class="task-list">
+      <!-- Task Card -->
+      <article class="task-card" draggable="true">
+        <h3>Design Homepage UI</h3>
+        <p>Create wireframes and high-fidelity mockups.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- IN PROGRESS COLUMN -->
+  <section class="kanban-column" id="in-progress">
+    <h2>In Progress</h2>
+    <div class="task-list">
+      <article class="task-card" draggable="true">
+        <h3>Setup Database</h3>
+        <p>Configure PostgreSQL and schema migrations.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DONE COLUMN -->
+  <section class="kanban-column" id="done">
+    <h2>Done</h2>
+    <div class="task-list">
+      <!-- Tasks will be dropped here -->
+    </div>
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
