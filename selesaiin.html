@@ -8,169 +8,497 @@
 </head>
 <body>
 
+<!-- ════════════════════════════
+     NAVBAR
+════════════════════════════ -->
+<nav class="navbar">
+  <a class="logo" href="#">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                 10-4.48 10-10S17.52 2 12 2zm-1 14.59L6.41
+                 12l1.42-1.41L11 13.17l5.17-5.17 1.42 1.42L11 16.59z"/>
+      </svg>
+    </div>
+    <span class="logo-text">SelesaiIn</span>
+  </a>
 
+  <div class="nav-right">
+    <button class="btn-bell" aria-label="Notifikasi">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+      </svg>
+      <span class="bell-badge"></span>
+    </button>
 
+    <button class="btn-bantuan">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      Bantuan
+    </button>
 
-  <!-- ── NAVBAR ── -->
-  <nav class="navbar">
-    <a class="logo" href="#">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
-                   10-4.48 10-10S17.52 2 12 2zm-1 14.59L6.41
-                   12l1.42-1.41L11 13.17l5.17-5.17 1.42
-                   1.42L11 16.59z"/>
+    <div class="user-info">
+      <div class="avatar">BS</div>
+      <div class="user-meta">
+        <span class="user-name">Budi Setiabudi</span>
+        <span class="user-dept">Teknik Informatika</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════
+     FILTER SECTION
+════════════════════════════ -->
+<section class="filter-section">
+  <div class="filter-card">
+    <div class="filter-top">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
-      </div>
-      <span class="logo-text">SelesaiIn</span>
-    </a>
-
-    <div class="nav-right">
-      <!-- User -->
-      <div class="user-info">
-        <div class="avatar">BS</div>
-        <div class="user-meta">
-          <span class="user-name">Budi Setiabudi</span>
-          <span class="user-dept">Teknik Informatika</span>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-
-
-
-
-
-
-
-
-  <!-- ── FILTER SECTION ── -->
-  <section class="filter-section">
-    <div class="filter-card">
-
-      <!-- Top row -->
-      <div class="filter-top">
-        <!-- Search -->
-        <div class="search-wrap">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-          <input class="search-input" type="text"
-                 placeholder="Cari tugas, modul, atau tag..." />
-        </div>
-
-        <!-- Date range -->
-        <div class="date-wrap">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-            <line x1="16" y1="2" x2="16" y2="6"/>
-            <line x1="8" y1="2" x2="8" y2="6"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-          15 Sep 2026 – 30 Sep 2026
-        </div>
-
-        <!-- Status tabs -->
-        <div class="status-tabs">
-          <button class="tab-btn active">To do</button>
-          <button class="tab-btn">In Progress</button>
-          <button class="tab-btn">Done</button>
-        </div>
-
-        <!-- Cari button -->
-        <button class="btn-search">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-          </svg>
-          Cari
-        </button>
+        <input class="search-input" type="text" placeholder="Cari tugas, modul, atau tag..." />
       </div>
 
-      <!-- Bottom row – active filters -->
-      <div class="filter-bottom">
-        <div class="filter-left">
-          <span class="filter-label">Filter Aktif:</span>
-
-          <span class="chip">
-            <span class="chip-dot red"></span>
-            Priority: High
-            <button class="chip-x" aria-label="Hapus filter">✕</button>
-          </span>
-
-          <span class="chip">
-            <span class="chip-dot green"></span>
-            Matkul: Pemrograman Web
-            <button class="chip-x" aria-label="Hapus filter">✕</button>
-          </span>
-
-          <span class="chip">
-            <span class="chip-dot blue"></span>
-            Semester 5
-            <button class="chip-x" aria-label="Hapus filter">✕</button>
-          </span>
-        </div>
-
-        <button class="btn-reset">Reset Filter</button>
+      <div class="date-wrap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        15 Sep 2026 – 30 Sep 2026
       </div>
 
+      <div class="status-tabs">
+        <button class="tab-btn active">To do</button>
+        <button class="tab-btn">In Progress</button>
+        <button class="tab-btn">Done</button>
+      </div>
+
+      <button class="btn-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+        </svg>
+        Cari
+      </button>
     </div>
-  </section>
 
-  <!-- ── KANBAN ── -->
-<!-- The Main Board Container -->
-<main class="kanban-board">
-
-  <!-- TO DO COLUMN -->
-  <section class="kanban-column" id="todo">
-    <h2>To Do</h2>
-    <div class="task-list">
-      <!-- Task Card -->
-      <article class="task-card" draggable="true">
-        <h3>Design Homepage UI</h3>
-        <p>Create wireframes and high-fidelity mockups.</p>
-      </article>
+    <div class="filter-bottom">
+      <div class="filter-left">
+        <span class="filter-label">Filter Aktif:</span>
+        <span class="chip">
+          <span class="chip-dot red"></span>Priority: High
+          <button class="chip-x" aria-label="Hapus">✕</button>
+        </span>
+        <span class="chip">
+          <span class="chip-dot green"></span>Matkul: Pemrograman Web
+          <button class="chip-x" aria-label="Hapus">✕</button>
+        </span>
+        <span class="chip">
+          <span class="chip-dot blue"></span>Semester 5
+          <button class="chip-x" aria-label="Hapus">✕</button>
+        </span>
+      </div>
+      <button class="btn-reset">Reset Filter</button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- IN PROGRESS COLUMN -->
-  <section class="kanban-column" id="in-progress">
-    <h2>In Progress</h2>
-    <div class="task-list">
-      <article class="task-card" draggable="true">
-        <h3>Setup Database</h3>
-        <p>Configure PostgreSQL and schema migrations.</p>
-      </article>
+<!-- ════════════════════════════
+     TASKS SECTION
+════════════════════════════ -->
+<section class="tasks-section">
+
+  <!-- Header -->
+  <div class="tasks-header">
+    <div>
+      <h1 class="tasks-title">
+        Tasks
+        <span class="tasks-count">6 Total</span>
+      </h1>
+      <p class="tasks-subtitle">Projek Akhir Matkul Pemrograman Web &amp; Aplikasi Enterprise</p>
     </div>
-  </section>
-
-  <!-- DONE COLUMN -->
-  <section class="kanban-column" id="done">
-    <h2>Done</h2>
-    <div class="task-list">
-      <!-- Tasks will be dropped here -->
+    <div class="tasks-actions">
+      <div class="view-toggle">
+        <button class="view-btn active">Kanban</button>
+        <button class="view-btn">List</button>
+      </div>
+      <button class="btn-add-task" onclick="openSidebar()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Tambah Tugas
+      </button>
     </div>
-  </section>
+  </div>
 
-</main>
+  <!-- Kanban Board -->
+  <div class="kanban-board">
 
+    <!-- ── Column: To do ── -->
+    <div class="kanban-col">
+      <div class="col-header">
+        <span class="col-title">
+          To do
+          <span class="col-badge gray">2</span>
+        </span>
+        <button class="col-menu" aria-label="Menu">···</button>
+      </div>
 
+      <div class="task-cards">
+        <!-- Card 1 -->
+        <div class="task-card">
+          <div class="card-top">
+            <span class="card-title">Projek Akhir Matkul Pemrograman Web</span>
+          </div>
+          <p class="card-desc">Selesaikan modul autentikasi JWT, routing dinamis, dan integrasi frontend dashboard.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                15 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge high">HIGH</span>
+              </span>
+            </div>
+            <div class="card-avatar av-fa">FA</div>
+          </div>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="task-card">
+          <div class="card-top">
+            <span class="card-title">Desain UI Mockup &amp; Diagram Database</span>
+          </div>
+          <p class="card-desc">Buat skema relasi Entity Relationship Diagram (ERD) dan mockup low-fidelity di Figma.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                18 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge medium">MEDIUM</span>
+              </span>
+            </div>
+            <div class="card-avatar av-rd">RD</div>
+          </div>
+        </div>
+      </div>
 
+      <button class="btn-add-card">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Tambah kartu baru
+      </button>
+    </div>
 
+    <!-- ── Column: In Progress ── -->
+    <div class="kanban-col">
+      <div class="col-header">
+        <span class="col-title">
+          In Progress
+          <span class="col-badge orange">3</span>
+        </span>
+        <button class="col-menu" aria-label="Menu">···</button>
+      </div>
 
+      <div class="task-cards">
+        <!-- Card 1 -->
+        <div class="task-card accent-orange">
+          <div class="card-top">
+            <span class="card-title">Setup Database Migration &amp; Seeding</span>
+          </div>
+          <p class="card-desc">Inisialisasi tabel users, roles, tasks, dan seeder data awal untuk pengujian.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                12 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge high">HIGH</span>
+              </span>
+            </div>
+            <div class="card-avatar av-ml">ML</div>
+          </div>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="task-card accent-orange">
+          <div class="card-top">
+            <span class="card-title">Integrasi REST API Auth &amp; Middleware</span>
+          </div>
+          <p class="card-desc">Validasi token Bearer dan proteksi endpoint tugas berdasarkan peran pengguna.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                14 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge medium">MEDIUM</span>
+              </span>
+            </div>
+            <div class="card-avatar av-an">AN</div>
+          </div>
+        </div>
 
+        <!-- Card 3 -->
+        <div class="task-card accent-orange">
+          <div class="card-top">
+            <span class="card-title">Desain Komponen Card &amp; Drag-Drop</span>
+          </div>
+          <p class="card-desc">Penyempurnaan tampilan kartu tugas dan gesture interaktif untuk pengalaman kanban.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                16 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge low">LOW</span>
+              </span>
+            </div>
+            <div class="card-avatar av-fa">FA</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ── Column: Done ── -->
+    <div class="kanban-col">
+      <div class="col-header">
+        <span class="col-title">
+          Done
+          <span class="col-badge green">1</span>
+        </span>
+        <button class="col-menu" aria-label="Menu">···</button>
+      </div>
 
+      <div class="task-cards">
+        <!-- Card 1 -->
+        <div class="task-card accent-green">
+          <div class="card-top">
+            <span class="card-title">Pengumpulan Proposal Proyek Web</span>
+            <svg class="card-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <p class="card-desc">Laporan Bab 1 hingga Bab 3 serta lembar persetujuan dosen pembimbing telah diunggah ke portal.</p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <span class="card-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span class="card-date-label">Due Date:</span>
+                08 September 2026
+              </span>
+              <span class="card-priority-row">
+                Priority: <span class="priority-badge done">DONE</span>
+              </span>
+            </div>
+            <div class="card-avatar av-fa">FA</div>
+          </div>
+        </div>
+      </div>
 
+      <div class="done-banner">✓ 1 tugas selesai tepat waktu minggu ini</div>
+    </div>
 
+  </div><!-- /kanban-board -->
+</section>
 
+<!-- ════════════════════════════
+     FLOATING ACTION BUTTON
+════════════════════════════ -->
+<button class="fab" id="fab" onclick="openSidebar()" aria-label="Tambah tugas baru">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+  </svg>
+</button>
+
+<!-- ════════════════════════════
+     SIDEBAR BACKDROP
+════════════════════════════ -->
+<div class="sidebar-backdrop" id="backdrop" onclick="closeSidebar()"></div>
+
+<!-- ════════════════════════════
+     SIDEBAR PANEL
+════════════════════════════ -->
+<aside class="sidebar" id="sidebar" aria-label="Tambah tugas baru">
+  <div class="sidebar-inner">
+
+    <!-- Head -->
+    <div class="sidebar-head">
+      <div>
+        <p class="sidebar-title">Add new task:</p>
+        <p class="sidebar-sub">Tambahkan penugasan baru ke papan kerja.</p>
+      </div>
+      <button class="btn-close" onclick="closeSidebar()" aria-label="Tutup">✕</button>
+    </div>
+
+    <!-- Name -->
+    <div class="field">
+      <label class="field-label" for="task-name">Name:</label>
+      <input class="field-input" id="task-name" type="text"
+             placeholder="Contoh: Implementasi modul JWT Auth" />
+    </div>
+
+    <!-- Due Date -->
+    <div class="field">
+      <label class="field-label" for="task-due">Due Date:</label>
+      <input class="field-input" id="task-due" type="date" />
+    </div>
+
+    <!-- Priority -->
+    <div class="field">
+      <span class="field-label">Priority:</span>
+      <div class="priority-btns">
+        <button class="priority-btn" data-p="low"    onclick="selectPriority(this)">Low</button>
+        <button class="priority-btn sel-medium" data-p="medium" onclick="selectPriority(this)">Medium</button>
+        <button class="priority-btn" data-p="high"   onclick="selectPriority(this)">High</button>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="field">
+      <label class="field-label" for="task-status">Status / Kolom:</label>
+      <select class="field-select" id="task-status">
+        <option value="todo">To do</option>
+        <option value="inprogress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+    </div>
+
+    <!-- Description -->
+    <div class="field">
+      <label class="field-label" for="task-desc">Deskripsi Tugas:</label>
+      <textarea class="field-textarea" id="task-desc"
+                placeholder="Tuliskan catatan teknis, link repositori, atau kriteria kelulusan..."></textarea>
+    </div>
+
+    <!-- Footer -->
+    <div class="sidebar-footer">
+      <button class="btn-batal" onclick="closeSidebar()">Batal</button>
+      <button class="btn-add-submit">
+        Add
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</aside>
+
+<!-- ════════════════════════════
+     JAVASCRIPT
+════════════════════════════ -->
+<script>
+  const sidebar  = document.getElementById('sidebar');
+  const backdrop = document.getElementById('backdrop');
+  const fab      = document.getElementById('fab');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    backdrop.classList.add('open');
+    fab.classList.add('hidden');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('open');
+    fab.classList.remove('hidden');
+  }
+
+  // Priority selection
+  function selectPriority(btn) {
+    document.querySelectorAll('.priority-btn').forEach(b => {
+      b.classList.remove('sel-low', 'sel-medium', 'sel-high');
+    });
+    btn.classList.add('sel-' + btn.dataset.p);
+  }
+
+  // View toggle (visual only)
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Status tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Close sidebar on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+</script>
 
 </body>
 </html>
